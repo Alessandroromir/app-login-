@@ -48,6 +48,18 @@ function login(username, password) {
       alert("Username o password errati!");
     }
   }
+
+  function showLoggedInScreen() {
+    // Nascondi la schermata di login
+    document.getElementById("login").style.display = "none";
+    // Mostra la schermata "logged-in"
+    document.getElementById("logged-in").style.display = "block";
+    // Aggiorna i dati dell'utente
+    document.getElementById("username").textContent = currentUser.username;
+    document.getElementById("loginDate").textContent = currentUser.loginDate.toLocaleDateString();
+    document.getElementById("loginCount").textContent = currentUser.loginCount;
+  }
+  
   
   // Funzione di logout
   function logout() {
